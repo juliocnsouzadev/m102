@@ -1,0 +1,12 @@
+Q: The Store Engine direclty dertermine:
+A: 	- The data file format
+	- Format of the indexes
+
+Q: To understand MMAPv1, it is important to know that it:
+A: Maps data files directly into virutal memory.
+
+Q: Relative to no padding, Power of Two Sized Allocations in MMAPv1 provides which of the following benefits? 
+A:	- Documents will not hat to move as soon as they grow in size
+	- Recorde spaces are likely to get re-used
+	- Documents that grow at a constante rate will move less often as time goes on.
+

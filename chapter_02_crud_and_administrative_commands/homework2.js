@@ -1,4 +1,3 @@
-// homework2.js
 homework = { }
 homework.a = function() { 
     if( db != "pcat" ) { 
@@ -24,4 +23,3 @@ homework.c = function() {
     db.products.group( {cond:{for:'ac3'},  reduce: function(obj,prev) { prev.csum += obj.price; },  initial: { csum: 0 } })[0].csum +
     db.products.group( {cond:{price:{$gte:0}},  reduce: function(obj,prev) { prev.csum += obj.price; },  initial: { csum: 0 } })[0].csum;
 }
-
