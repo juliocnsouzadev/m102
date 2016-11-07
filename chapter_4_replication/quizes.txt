@@ -1,0 +1,13 @@
+Q: Why do we use replica sets?
+A:  - High availability
+    - Durabilitly
+    - Scaling in some situations
+    - Disaster recover
+
+Q: Which of the following are true about replication in MongoDB?
+A:  - Works on coomodity
+    - Supports a model of replication with a single primary and multilples secon
+    daries
+    - Works acroos wide area networks
+    - Provides eventual consistency
+
