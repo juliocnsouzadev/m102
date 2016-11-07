@@ -10,3 +10,47 @@ A:	- Documents will not hat to move as soon as they grow in size
 	- Recorde spaces are likely to get re-used
 	- Documents that grow at a constante rate will move less often as time goes on.
 
+Q: In MongoDB 3.0, the WiredTiger storage engine brings which of the following to MongoDB? 
+A: 	- Compression
+	- Document-level concurrency control
+
+Q: What will happen if an index is created on a field that does not exist in any of the documents in the collection?
+A: MongoDB will create the index without any warning
+
+Q: A MongoDB index can have keys of different types (i.e., ints, dates, string)
+A: True
+
+Q: If an index is unique AND sparse, can 2 documents which do not include the field thais is indexed exist in the same collection?
+A: Yes
+
+Q: You create a text index on the "title" field of the movies collection, and then perform the following text search:
+db.movies.find( { $text : {$search : "Big Lebowski" } } )
+Which of the following documents will be returned, assuming they are in the movies collection? Check all that apply.
+A:	- {'title' : 'The big Lebowski', 'star' : 'Jeff Bridges'}
+	- {'title' : 'Big', 'star' : 'Tom Hanks'}
+	- {'title' : 'Big Fish', 'star' : 'Ewan MacGregor'}
+
+Q: An explain plan can tell you which of the following?
+A: 	- How many documents a query examines
+	- What indexes a query uses
+	- How many documents a query returned
+
+Q: Suppose we run:
+db.foo.createIndex({a:1,b:1,c:1})
+db.foo.find({a:"sports", b:{$gt:100}})
+What would need to be touched in order to fulfill the query?
+A: the index and some documents need to be touched
+The answer is that both the index and the documents need to be touched.
+While the index is all that's required to specify the document that matches the query, we're asking for the entire document, 
+which may contain fields that are not included in the index. Therefore, we need to touch that entire document.
+
+Q: Which ops are safe to kill (without any special effort or cleanup or implications later beyond the obvious):
+A:	- A query
+	- A findAndModify on a primary
+	- A foreground create index building on a primary
+
+Q: The system profile is on by default
+A: False
+
+
+
