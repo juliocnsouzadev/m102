@@ -11,3 +11,29 @@ A:  - Works on coomodity
     - Works acroos wide area networks
     - Provides eventual consistency
 
+Q: Imagine a replica set with 5 servers. What is the minimum number of servers (assume each server has 1 vote) to form a consensus?
+A: 3
+
+Q: Which of the following scenarios can trigger a rollback?
+A:  - A secondary (that was previously a primary) contains write operatins that are aehad of the current primary
+
+Q: Why do we give replica sets names?
+A:  - Having a single name to refer to a set reduces confusion and human error
+
+Q: What does optimeDate represent?
+A: The time of the last operation
+
+Q: Which command prevents a node from becoming primary for 5 minutes?
+A:  - rs.stepDown(300)
+    - rs.freeze(300)
+
+Q: When a primary goes down and then is brought back online, it will always resume primary status:
+A: False
+
+Q: What are good reasons to read from a secondary? 
+A:  - Geographic reads (latency)
+    - High availability (during a failover)
+    - Separete a workload (analytics/reporting)
+
+Q: For reads which must be consistent, which read preference(s) is used?
+A: Primary
