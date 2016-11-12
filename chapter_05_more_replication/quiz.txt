@@ -1,0 +1,5 @@
+Q: Which of the following statements are true about reconfiguring a replica set?
+A:  - Servers can be either removed from the replica set, or added
+    - If a member of the replica set is not avaliable, thhe replica set can still be recofigured
+
+
