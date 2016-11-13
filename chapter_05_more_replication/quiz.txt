@@ -2,4 +2,9 @@ Q: Which of the following statements are true about reconfiguring a replica set?
 A:  - Servers can be either removed from the replica set, or added
     - If a member of the replica set is not avaliable, thhe replica set can still be recofigured
 
+Q: When might you want to use an arbiter?
+A:  - To make an odd number of votes in the replica set
+    - To spreak the replica set over more datacenters
+    - To protect against network splits
+
 
