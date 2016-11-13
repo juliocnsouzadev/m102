@@ -10,4 +10,8 @@ A:  - To make an odd number of votes in the replica set
 Q: Which values are valid "priority" values in a replia set configuration?
 A:  - 0, 500, 88.4, 88
 
+Q: In which of the following scenarios does it make sense to use slave delay?
+A:  - Prevent against a new client application release bug
+    - During development when using experimental queries
+
 
