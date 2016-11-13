@@ -7,4 +7,7 @@ A:  - To make an odd number of votes in the replica set
     - To spreak the replica set over more datacenters
     - To protect against network splits
 
+Q: Which values are valid "priority" values in a replia set configuration?
+A:  - 0, 500, 88.4, 88
+
 
