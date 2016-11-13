@@ -14,4 +14,5 @@ Q: In which of the following scenarios does it make sense to use slave delay?
 A:  - Prevent against a new client application release bug
     - During development when using experimental queries
 
-
+Q: Generally, is it typical for servers to have different vote counts?
+A: No
