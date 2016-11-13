@@ -20,3 +20,17 @@ A: No
 Q; Imagine you're using a 5-server replica set and you have critical inserts which you do not want the potential for a rollback to happen. You also have to consider that secondaries may be taken down from to time for maintenance, leaving you with a potential 4-server replica set. Which write concern is best suited for these critical inserts?
 A: w=majority
 
+Q: Write Concern is set at the DB level and every operation on this DB must use the same Write Concern:
+A: False
+
+Q: For getLastError / WriteConcern with w=3, if you have an arbiter, it counts as one of the 3
+A: False
+
+Q: Does getLastError() need to be called if using default Write Concerns?
+A: No
+
+Q: What are some issues with using wtimeout?
+A:  - A write can be made but getLastError() could report a failure
+    - Each query could pontentially take the full duration of the wtimeout
+    - Pile-ups of connections
+
