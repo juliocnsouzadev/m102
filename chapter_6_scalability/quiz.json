@@ -1,0 +1,33 @@
+{
+    Q:"A field that has the boolean of value of either true or false would make for a good shard key:",
+    A:"false",
+    
+    Q:"It is possible to configure the size of each chunk which affects when they will be split. A large chunk size means chunks will be split less often as each chunk needs to grow larger before it is split, and a small chunk size means they will be split more often, for instance.
+    Which of the following statements are true regarding a very small chunk size configuration as compared to a large chunk size configuration?",
+    F:"- More migrations would have to take place
+       - Each shard woould be very balanced in terms of how much data they contain"
+    
+    Q:"db.foo.find(
+        { name : { $gt : "Joe", $lt : "John" } } )
+        is efficient if the collection is sharded on { name : 1 }",
+    A:"True",
+    
+    Q:"How many mongos processes should you run (generally)?",
+    A:"However many you wuant but usually much more than one",
+    
+    Q:"Which are true?",
+    A:"- Three config servers is typical in a MongoDB cluster with 1000 total machines
+        - All the config servers have exactly the same data",
+    
+    Q:"",
+    A:"",
+    
+    Q:"",
+    A:"",
+    
+    Q:"",
+    A:"",
+    
+    Q:"",
+    A:""
+}
