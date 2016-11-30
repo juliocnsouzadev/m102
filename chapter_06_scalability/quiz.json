@@ -41,6 +41,6 @@
     Q:"If I have 3 shards, 3 member replica sets, 3 config servers, and 6 mongos processes running, how many machines might we use for that?",
     A:"While we could use more if we wanted, 9 machines would be just fine",
 
-    Q:"",
-    A:""
+    Q:"Generally speaking, shard keys with non-uniform key distributions are:",
+    A:"Ok"
 }
