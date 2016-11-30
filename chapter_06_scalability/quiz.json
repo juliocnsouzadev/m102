@@ -19,15 +19,28 @@
     A:"- Three config servers is typical in a MongoDB cluster with 1000 total machines
         - All the config servers have exactly the same data",
     
-    Q:"",
-    A:"",
+    Q:"In MongoDB v2.6, by default (i.e., if shardCollection hasn't been invoked) collections are:",
+    A:"On the primary shard and not sharded",
     
-    Q:"",
-    A:"",
+    Q:"Your shard key for the people collection is { friends : 1, name : -1 }. You also have an index on { name : 1, phoneNumber : 1 }
+    Which of the following queries will definitely be scatter gather queries?",
+    A:"db.people.find({name:"Robert"})
+    db.people.find({name:"Juanito", phoneNumber:"452-574-1425"})
+    db.people.find({hobbies:"video games"})",
     
-    Q:"",
-    A:"",
+    Q:"Suppose we are building an email server system and have a collection:
+    messages
+    --------
+    {_id:<message_id>, mailbox_id:___,
+    sender_id:___, subject:___, date:___,
+    body:___, read:<bool>, ...
+    }
+    We have millions of users (email addresses / mailboxes) so want to shard this collection. Of the choices listed, what's a good shard key?",
+    A:"{mailbox_id:1}",
     
+    Q:"If I have 3 shards, 3 member replica sets, 3 config servers, and 6 mongos processes running, how many machines might we use for that?",
+    A:"While we could use more if we wanted, 9 machines would be just fine",
+
     Q:"",
     A:""
 }
