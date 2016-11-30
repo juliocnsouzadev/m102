@@ -34,3 +34,37 @@ A:  - A write can be made but getLastError() could report a failure
     - Each query could pontentially take the full duration of the wtimeout
     - Pile-ups of connections
 
+Q: Using the following output from ls -R, which directories house the data files for a WiredTiger mongod process?
+
+$ ls -R
+A                               C                               mongodA.log.2015-04-08T23-26-14 mongodB.log.2015-04-08T23-26-24 mongodC.log.2015-04-08T23-26-18
+B                               mongodA.log                     mongodB.log                     mongodC.log
+
+./A:
+WiredTiger                          WiredTiger.wt                       collection-4-4315177254347078174.wt index-3-4315177254347078174.wt      mongod.lock
+WiredTiger.basecfg                  _mdb_catalog.wt                     collection-6-4315177254347078174.wt index-5-4315177254347078174.wt      sizeStorer.wt
+WiredTiger.lock                     collection-0-4315177254347078174.wt collection-7-4315177254347078174.wt index-8-4315177254347078174.wt      storage.bson
+WiredTiger.turtle                   collection-2-4315177254347078174.wt index-1-4315177254347078174.wt      journal
+
+./A/journal:
+WiredTigerLog.0000000001     WiredTigerPreplog.0000000001
+
+./B:
+_tmp         journal      local.0      local.1      local.ns     mongod.lock  storage.bson test.0       test.ns
+
+./B/_tmp:
+
+./B/journal:
+j._0 lsn
+
+./C:
+WiredTiger                          _mdb_catalog.wt                     collection-7-6008883041206081919.wt index-5-6008883041206081919.wt      storage.bson
+WiredTiger.basecfg                  collection-0-6008883041206081919.wt collection-9-6008883041206081919.wt index-8-6008883041206081919.wt
+WiredTiger.lock                     collection-2-6008883041206081919.wt index-1-6008883041206081919.wt      journal
+WiredTiger.turtle                   collection-4-6008883041206081919.wt index-10-6008883041206081919.wt     mongod.lock
+WiredTiger.wt                       collection-6-6008883041206081919.wt index-3-6008883041206081919.wt      sizeStorer.wt
+
+./C/journal:
+WiredTigerLog.0000000001     WiredTigerPreplog.0000000001
+
+A: A, C
