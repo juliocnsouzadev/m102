@@ -1,0 +1,5 @@
+Q: To run MongoDB with encryption over the wire, you need to:
+A: Compile mongdb with --ssl
+
+Q: Which of the following do you need to run with --auth or --keyFile in order to run your system with authentication?
+A: mongod , mongos
